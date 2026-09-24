@@ -9,7 +9,7 @@ One delete call deletes the data stored in our object, the other deletes the dat
    from T data[CAPACITY] to T* data [CAPACITY] is what made a destructor necessary, and what
    would happen if you forgot to write one. Would you get a compiler error? Why or why not?
 
-
+The original array contained the actual objects inside of it. When the array was destroyed so was the content inside. The LinkedList however is only storing pointers so we need to clean-up the data at the end of the points as well. 
 
 3. search() and addFront() both take a T*, but they treat that pointer completely differently.
    Explain the difference in terms of ownership: which one is allowed to delete what you hand it,
